@@ -1,0 +1,25 @@
+{
+  "name": "unmit/laravel-business-objects",
+  "description": "Business Object Service",
+  "type": "service",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Unmit\\BusinessObjects\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Stirling Crow",
+      "email": "stirlingcrow@unm.edu"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "dont-discover": [],
+      "providers": [
+        "Unmit\\BusinessObjects\\BusinessObjectsServiceProvider"
+      ]
+    }
+  }
+}
