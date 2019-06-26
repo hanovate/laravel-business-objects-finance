@@ -1,6 +1,6 @@
 {
-  "name": "unmit/laravel-business-objects",
-  "description": "Business Object Service",
+  "name": "unmit/laravel-business-objects-finance",
+  "description": "Business Object Service for UNM Ellucian Banner Finance entities",
   "type": "service",
   "license": "MIT",
   "autoload": {
@@ -10,8 +10,8 @@
   },
   "authors": [
     {
-      "name": "Stirling Crow",
-      "email": "stirlingcrow@unm.edu"
+      "name": "Ron V Estrada",
+      "email": "rvestra@unm.edu"
     }
   ],
   "extra": {
