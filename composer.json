@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Unmit\\BusinessObjects\\": "src/"
+      "Unmit\\BusinessObjects\\Finance\\": "src/"
     }
   },
   "authors": [
