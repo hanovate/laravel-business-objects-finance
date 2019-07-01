@@ -3,11 +3,32 @@
   "description": "Business Object Service for UNM Ellucian Banner Finance entities",
   "type": "service",
   "license": "MIT",
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "unmit/laravel-business-objects",
+        "version": "1.0.0",
+        "source": {
+          "url": "UNMIT@vs-ssh.visualstudio.com:v3/UNMIT/laravel-business-objects/laravel-business-objects",
+          "type": "git",
+          "reference": "master"
+        }
+      }
+    }
+  ],
   "autoload": {
     "psr-4": {
-      "Unmit\\BusinessObjects\\Finance\\": "src/"
+      "Unmit\\BusinessObjects\\Finance\\": "src/",
+      "Unmit\\BusinessObjects\\": "vendor/unmit/laravel-business-objects/src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Unmit\\BusinessObjects\\Finance\\Test\\": "tests/"
+    }
+  },
+
   "authors": [
     {
       "name": "Ron V Estrada",
@@ -21,5 +42,10 @@
         "Unmit\\BusinessObjects\\BusinessObjectsServiceProvider"
       ]
     }
+  },
+  "require-dev": {
+    "unmit/laravel-business-objects": "1.0.0",
+    "phpunit/phpunit": "^8.2",
+    "orchestra/testbench": "^3.8"
   }
 }

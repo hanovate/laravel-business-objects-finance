@@ -8,6 +8,7 @@ use Unmit\BusinessObjects\BusinessObjectItem;
 
 class Request extends AbstractBusinessObject
 {
+    private $fields;
     public $initiatorId;
     public $title;
     public $organizationCode;
@@ -18,15 +19,17 @@ class Request extends AbstractBusinessObject
         $items = new Collection();
         // Initiator Id - netid
         $initiatorId = new BusinessObjectItem();
-        $initiatorId->setName('title');
-        $initiatorId->setBusinessName('title');
-        $initiatorId->setColumn('p_fzxxx');
+        $initiatorId->setName('initiator netid');
+        $initiatorId->setBusinessName('initiator-id');
+        $initiatorId->setColumn('szxxx_sequence_no');
 
-        $initiatorId->push($initiatorId);        // Title
+        $items->push($initiatorId);
+
+        // Title
         $title = new BusinessObjectItem();
         $title->setName('title');
         $title->setBusinessName('title');
-        $title->setColumn('p_fzxxx');
+        $title->setColumn('szxxx_title');
 
         $items->push($title);
 
@@ -34,7 +37,7 @@ class Request extends AbstractBusinessObject
         $organizationCode = new BusinessObjectItem();
         $organizationCode->setName('organizationCode');
         $organizationCode->setBusinessName('organization-code');
-        $organizationCode->setColumn('p_fzxxx');
+        $organizationCode->setColumn('szxxx_org');
 
         $items->push($organizationCode);
 
@@ -42,7 +45,7 @@ class Request extends AbstractBusinessObject
         $businessReason = new BusinessObjectItem();
         $businessReason->setName('businessReason');
         $businessReason->setBusinessName('business-reason');
-        $businessReason->setColumn('p_fzxxx');
+        $businessReason->setColumn('szxxx_reason');
 
         $items->push($businessReason);
 
