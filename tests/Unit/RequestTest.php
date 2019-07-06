@@ -1,16 +1,15 @@
 <?php
 
 
-namespace Unmit\BusinessObjects\Finance\Test\Unit;
+namespace Unmit\BusinessObjects\Finance\Tests\Unit;
 
+use Unmit\BusinessObjects\Finance\Tests\TestCase;
 use Unmit\BusinessObjects\BusinessObjectInterface;
 use Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts\Request;
-use PHPUnit\Framework\TestCase as BaseTestCase;
 
 
-final class RequestTest extends BaseTestCase
+final class RequestTest extends TestCase
 {
-    private $request;
     /**
      * A basic test example.
      *
@@ -24,17 +23,19 @@ final class RequestTest extends BaseTestCase
     public function testIsInterface()
     {
         $request = new Request();
-        assertInstanceOf(BusinessObjectInterface::class, $request);
-        $this->request = $request;
+        $this->assertInstanceOf(BusinessObjectInterface::class, $request);
     }
-    public function fieldsAreAccurateTest()
+    public function testColumnsAreAccurateTest()
     {
-        $items = $this->request->getFields();
+        $request = new Request();
         $columnList = ['szxxx_sequence_no','szxxx_title','szxxx_org','szxxx_reason'];
-//        $businessNameList = ['initiator-id','title','organization-code','business-reason'];
-        assertEquals($columnList,$items->getColumns());
-//        assertEquals($businessNameList,$items->getBusinessNames());
+        $this->assertEqualsCanonicalizing($columnList,$request->getColumns());
 
-//        $this->assertTrue(true);
+    }
+    public function testBusinessNamesAreAccurateTest()
+    {
+        $request = new Request();
+        $businessNameList = ['initiator-id','title','organization-code','business-reason'];
+        $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
 }

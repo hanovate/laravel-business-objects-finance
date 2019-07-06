@@ -17,6 +17,13 @@
       }
     }
   ],
+  "require": {
+    "unmit/laravel-business-objects": "1.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "orchestra/testbench": "3.7"
+  },
   "autoload": {
     "psr-4": {
       "Unmit\\BusinessObjects\\Finance\\": "src/",
@@ -25,10 +32,9 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Unmit\\BusinessObjects\\Finance\\Test\\": "tests/"
+      "Unmit\\BusinessObjects\\Finance\\Tests\\": "tests/"
     }
   },
-
   "authors": [
     {
       "name": "Ron V Estrada",
@@ -42,10 +48,5 @@
         "Unmit\\BusinessObjects\\BusinessObjectsServiceProvider"
       ]
     }
-  },
-  "require-dev": {
-    "unmit/laravel-business-objects": "1.0.0",
-    "phpunit/phpunit": "^8.2",
-    "orchestra/testbench": "^3.8"
   }
 }

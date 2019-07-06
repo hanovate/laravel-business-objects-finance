@@ -8,7 +8,7 @@ use Unmit\BusinessObjects\BusinessObjectItem;
 
 class Request extends AbstractBusinessObject
 {
-    private $fields;
+
     public $initiatorId;
     public $title;
     public $organizationCode;

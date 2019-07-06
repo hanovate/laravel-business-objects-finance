@@ -19,7 +19,7 @@ class OrganizationCode extends AbstractBusinessObject
         $code = new BusinessObjectItem();
         $code->setName('code');
         $code->setBusinessName('code');
-        $code->setColumn('p_fzxxx');
+        $code->setColumn('p_fzxxxcode');
 
         $items->push($code);        // Title
 
@@ -27,7 +27,7 @@ class OrganizationCode extends AbstractBusinessObject
         $description = new BusinessObjectItem();
         $description->setName('description');
         $description->setBusinessName('description');
-        $description->setColumn('p_fzxxx');
+        $description->setColumn('p_fzxxxdesc');
 
         $items->push($description);
 

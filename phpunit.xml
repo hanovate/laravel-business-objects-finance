@@ -9,6 +9,9 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false">
+<php>
+    <env name="APP_KEY" value="base64:yNKZp9sODCwP8tnExzwya0P+WoNhKSY82xY29oEjOdE="/>
+</php>
 <testsuites>
     <testsuite name="Unit">
         <directory suffix="Test.php">./tests/Unit</directory>

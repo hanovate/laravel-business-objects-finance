@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":206:{a:2:{s:7:"defects";a:1:{s:67:"Unmit\BusinessObjects\Finance\Tests\Unit\RequestTest::testBasicTest";i:4;}s:5:"times";a:1:{s:67:"Unmit\BusinessObjects\Finance\Tests\Unit\RequestTest::testBasicTest";d:0.968;}}}
