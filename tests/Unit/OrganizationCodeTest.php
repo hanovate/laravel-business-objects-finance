@@ -69,10 +69,11 @@ final class OrganizationCodeTest extends TestCase
     public function testGetNames()
     {
         $organizationCode = new OrganizationCode();
-        $item = $organizationCode->getByColumn('p_fzxxxcode');
+        $item = $organizationCode->getByColumn('p_fzxxxdesc');
         $this->assertInstanceOf(BusinessObjectItem::class, $item);
-        $this->assertEquals('code', $item->getBusinessName());
-        $this->assertEquals('p_fzxxxcode', $item->getColumn());
+        $this->assertEquals('description', $item->getBusinessName());
+        $item = $organizationCode->getByBusinessName('description');
+        $this->assertEquals('p_fzxxxdesc', $item->getColumn());
     }
 
 }
