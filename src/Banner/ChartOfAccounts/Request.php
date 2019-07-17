@@ -21,7 +21,7 @@ class Request extends AbstractBusinessObject
         $initiatorId = new BusinessObjectItem();
         $initiatorId->setName('initiator netid');
         $initiatorId->setBusinessName('initiator-id');
-        $initiatorId->setColumn('szxxx_sequence_no');
+        $initiatorId->setColumn('v_sequence_no');
 
         $items->push($initiatorId);
 
@@ -29,7 +29,7 @@ class Request extends AbstractBusinessObject
         $title = new BusinessObjectItem();
         $title->setName('title');
         $title->setBusinessName('title');
-        $title->setColumn('szxxx_title');
+        $title->setColumn('v_title');
 
         $items->push($title);
 
@@ -37,7 +37,7 @@ class Request extends AbstractBusinessObject
         $organizationCode = new BusinessObjectItem();
         $organizationCode->setName('organizationCode');
         $organizationCode->setBusinessName('organization-code');
-        $organizationCode->setColumn('szxxx_org');
+        $organizationCode->setColumn('v_orgn');
 
         $items->push($organizationCode);
 
@@ -45,7 +45,7 @@ class Request extends AbstractBusinessObject
         $businessReason = new BusinessObjectItem();
         $businessReason->setName('businessReason');
         $businessReason->setBusinessName('business-reason');
-        $businessReason->setColumn('szxxx_reason');
+        $businessReason->setColumn('v_rec_comm');
 
         $items->push($businessReason);
 
