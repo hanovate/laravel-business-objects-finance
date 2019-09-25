@@ -6,20 +6,11 @@ namespace Unmit\BusinessObjects\Finance\Tests\Unit;
 use Unmit\BusinessObjects\Finance\Tests\TestCase;
 use Unmit\BusinessObjects\BusinessObjectInterface;
 use Unmit\BusinessObjects\BusinessObjectItem;
-use Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts\OrganizationCode;
+use Unmit\BusinessObjects\Finance\Banner\OrganizationCode;
 
 
 final class OrganizationCodeTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $this->assertTrue(true);
-    }
 
     public function testIsInterface()
     {
@@ -29,39 +20,39 @@ final class OrganizationCodeTest extends TestCase
     public function testColumnsAreAccurate()
     {
         $organizationCode = new OrganizationCode();
-        $columnList = ['p_fzxxxcode','p_fzxxxdesc'];
-        $this->assertEqualsCanonicalizing($columnList,$organizationCode->getColumns());
+        $columnList = ['ftvorgn_orgn_code','ftvorgn_title'];
+        $this->assertEqualsCanonicalizing($columnList,$organizationCode->getColumnNames());
     }
     public function testBusinessNamesAreAccurate()
     {
         $organizationCode = new OrganizationCode();
-        $businessNameList = ['code','description'];
+        $businessNameList = ['code','title'];
         $this->assertEqualsCanonicalizing($businessNameList,$organizationCode->getBusinessNames());
     }
     public function testJsonIsAccurate()
     {
         $organizationCode = new OrganizationCode();
         $json = '{"0":{
-                        "business-name":"description",
-                        "column":"p_fzxxxdesc",
-                        "name":"description"},
-                "1":{
                         "business-name":"code",
-                        "column":"p_fzxxxcode",
-                        "name":"code"}}';
+                        "column-name":"ftvorgn_orgn_code",
+                        "name":"code"},
+                "1":{
+                        "business-name":"title",
+                        "column-name":"ftvorgn_title",
+                        "name":"title"}}';
         $this->assertJsonStringEqualsJsonString($json,$organizationCode->toJson());
     }
     public function testArrayIsAccurate()
     {
         $organizationCode = new OrganizationCode();
         $array = [
-                    ["business-name" => "description",
-                    "column" => "p_fzxxxdesc",
-                    "name" => "description"],
+                    ["business-name" => "code",
+                    "column-name" => "ftvorgn_orgn_code",
+                    "name" => "code"],
                     [
-                    "business-name" => "code",
-                    "column" => "p_fzxxxcode",
-                    "name" => "code"]
+                    "business-name" => "title",
+                    "column-name" => "ftvorgn_title",
+                    "name" => "title"]
                 ];
         $this->assertEqualsCanonicalizing($array,$organizationCode->toArray());
     }
@@ -69,11 +60,11 @@ final class OrganizationCodeTest extends TestCase
     public function testGetNames()
     {
         $organizationCode = new OrganizationCode();
-        $item = $organizationCode->getByColumn('p_fzxxxdesc');
+        $item = $organizationCode->getByColumnName('ftvorgn_title');
         $this->assertInstanceOf(BusinessObjectItem::class, $item);
-        $this->assertEquals('description', $item->getBusinessName());
-        $item = $organizationCode->getByBusinessName('description');
-        $this->assertEquals('p_fzxxxdesc', $item->getColumn());
+        $this->assertEquals('title', $item->getBusinessName());
+        $item = $organizationCode->getByBusinessName('title');
+        $this->assertEquals('ftvorgn_title', $item->getColumnName());
     }
 
 }
