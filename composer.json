@@ -8,17 +8,17 @@
       "type": "package",
       "package": {
         "name": "unmit/laravel-business-objects",
-        "version": "1.0.0",
+        "version": "v0.1.13",
         "source": {
           "url": "UNMIT@vs-ssh.visualstudio.com:v3/UNMIT/laravel-business-objects/laravel-business-objects",
           "type": "git",
-          "reference": "master"
+          "reference": "v0.1.13"
         }
       }
     }
   ],
   "require": {
-    "unmit/laravel-business-objects": "1.0.0"
+    "unmit/laravel-business-objects": "v0.1.13"
   },
   "require-dev": {
     "phpunit/phpunit": "^7.5",
