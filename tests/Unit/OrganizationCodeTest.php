@@ -11,7 +11,6 @@ use Unmit\BusinessObjects\Finance\Banner\OrganizationCode;
 
 final class OrganizationCodeTest extends TestCase
 {
-
     public function testIsInterface()
     {
         $organizationCode = new OrganizationCode();
