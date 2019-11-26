@@ -31,7 +31,7 @@ class Request extends AbstractBusinessObject
         $items->push($id);
 
         // Initiator Id - netid
-        $initiatorId = new BusinessObjectItem('initiatorId','Initiator Netid','V_NAME_IN');
+        $initiatorId = new BusinessObjectItem('name','Initiator Netid','V_NAME_IN');
         $items->push($initiatorId);
 
         // Title
@@ -39,12 +39,8 @@ class Request extends AbstractBusinessObject
         $items->push($title);
 
         // Business Reason
-        $businessReason = new BusinessObjectItem('businessReason', 'Business Reason', 'V_REC_COMM_IN');
+        $businessReason = new BusinessObjectItem('business_reason', 'Business Reason', 'V_REC_COMM_IN');
         $items->push($businessReason);
-
-        // Action
-        $action = new BusinessObjectItem('action', 'Action', 'V_ACTN_IN');
-        $items->push($action);
 
         $this->setFields($items);
     }
