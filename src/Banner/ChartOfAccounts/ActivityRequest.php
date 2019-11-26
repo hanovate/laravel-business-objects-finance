@@ -23,7 +23,7 @@ class ActivityRequest extends Request
         $items = $this->getFields();
 
         // Organization Code
-        $organizationCode = new BusinessObjectItem('organizationCode','Organization Code', 'V_ORGN');
+        $organizationCode = new BusinessObjectItem('organizationCode','Organization Code', 'V_ORGN_IN');
         $items->push($organizationCode);
 
         $this->setFields($items);
