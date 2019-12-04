@@ -31,7 +31,7 @@ class Request extends AbstractBusinessObject
         $items->push($id);
 
         // Initiator Id - netid
-        $initiatorId = new BusinessObjectItem('name','Initiator Netid','V_NAME_IN');
+        $initiatorId = new BusinessObjectItem('name','Initiator Netid','V_NETID_IN');
         $items->push($initiatorId);
 
         // Title
