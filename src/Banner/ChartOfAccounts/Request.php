@@ -16,7 +16,7 @@ use Unmit\BusinessObjects\BusinessObjectItem;
 class Request extends AbstractBusinessObject
 {
     public $id;
-    public $initiatorId;
+    public $netid;
     public $title;
     public $businessReason;
     public $action;
@@ -31,7 +31,7 @@ class Request extends AbstractBusinessObject
         $items->push($id);
 
         // Initiator Id - netid
-        $initiatorId = new BusinessObjectItem('name','Initiator Netid','V_NETID_IN');
+        $initiatorId = new BusinessObjectItem('netid','Initiator Netid','V_NETID_IN');
         $items->push($initiatorId);
 
         // Title
