@@ -23,7 +23,7 @@ class OrganizationCode extends AbstractBusinessObject
         $items = new Collection();
 
         // Code
-        $code = new BusinessObjectItem('code','code','ftvorgn_orgn_code');
+        $code = new BusinessObjectItem('id','code','ftvorgn_orgn_code');
         $items->push($code);
 
         // Title
