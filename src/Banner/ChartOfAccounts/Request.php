@@ -19,7 +19,6 @@ class Request extends AbstractBusinessObject
     public $netid;
     public $title;
     public $businessReason;
-    public $action;
 
 
     public function __construct()
