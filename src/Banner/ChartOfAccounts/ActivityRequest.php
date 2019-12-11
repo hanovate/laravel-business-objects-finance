@@ -4,6 +4,7 @@ namespace Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts;
 
 use Unmit\BusinessObjects\AbstractBusinessObject;
 use Unmit\BusinessObjects\BusinessObjectItem;
+use Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts\Request;
 /**
  * Class: Request
  *
