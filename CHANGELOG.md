@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-10-29 - RVE
+### Changed 
+- removed title from request and moved to relative type
+- removed package names
+
 ## [0.1.1] - 2019-10-29 - RVE
 ### Changed 
 - change request to be broken into foapa

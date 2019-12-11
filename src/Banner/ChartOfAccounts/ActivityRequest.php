@@ -15,6 +15,7 @@ use Unmit\BusinessObjects\BusinessObjectItem;
 class ActivityRequest extends Request
 {
     public $organizationCode;
+    public $title;
 
     public function __construct()
     {
@@ -23,8 +24,12 @@ class ActivityRequest extends Request
         $items = $this->getFields();
 
         // Organization Code
-        $organizationCode = new BusinessObjectItem('organization_code','Organization Code', 'V_ORGN_IN');
+        $organizationCode = new BusinessObjectItem('organization_code','Organization Code', 'FZBCOAM_ACTV_ORGN');
         $items->push($organizationCode);
+
+        // Title
+        $title = new BusinessObjectItem('title', 'Title', 'FZBCOAM_ACTV_TITLE');
+        $items->push($title);
 
         $this->setFields($items);
     }
