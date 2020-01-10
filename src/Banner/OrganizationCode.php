@@ -22,16 +22,20 @@ class OrganizationCode extends AbstractBusinessObject
     {
         $items = new Collection();
 
-        // Code
-        $code = new BusinessObjectItem('id','code','ftvorgn_orgn_code');
-        $items->push($code);
+        $elems = [
+            [
+                BusinessObjectItem::NAME => 'id',
+                BusinessObjectItem::BUSINESS_NAME => 'code',
+                BusinessObjectItem::COLUMN_NAME => 'orgn_code'
+            ],[
+                BusinessObjectItem::BUSINESS_NAME => 'title',
+                BusinessObjectItem::COLUMN_NAME => 'title'
+            ]
+        ];
 
-        // Title
-        $title = new BusinessObjectItem('title','title','ftvorgn_title');
-        $items->push($title);
+        $this->pushElements($items,'ftvorgn',$elems);
 
         $this->setFields($items);
-
     }
 
 }
