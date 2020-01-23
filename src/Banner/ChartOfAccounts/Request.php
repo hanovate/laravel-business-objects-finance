@@ -3,7 +3,7 @@
 namespace Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts;
 
 use Illuminate\Support\Collection;
-use Unmit\BusinessObjects\AbstractBusinessObject;
+use Unmit\ldk\BusinessObjectsbstractBusinessObject;
 use Unmit\BusinessObjects\BusinessObjectItem;
 /**
  * Class: Request

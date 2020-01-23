@@ -1,8 +1,8 @@
 <?php
-namespace Unmit\BusinessObjects\Finance;
+namespace Unmit\ldk\BusinessObjects\Finance;
 
 use Illuminate\Support\ServiceProvider;
-use Unmit\BusinessObjects\BusinessObjectsServiceProvider;
+use Unmit\ldk\BusinessObjects\BusinessObjectsServiceProvider;
 
 class BusinessObjectsFinanceServiceProvider extends ServiceProvider {
     public function boot()

@@ -7,18 +7,18 @@
     {
       "type": "package",
       "package": {
-        "name": "unmit/laravel-business-objects",
-        "version": "v0.1.13",
+        "name": "unmit/ldk",
+        "version": "dev",
         "source": {
-          "url": "UNMIT@vs-ssh.visualstudio.com:v3/UNMIT/laravel-business-objects/laravel-business-objects",
+          "url": "UNMIT@vs-ssh.visualstudio.com:v3/UNMIT/laravel-development-kit/laravel-development-kit",
           "type": "git",
-          "reference": "v0.1.13"
+          "reference": "dev"
         }
       }
     }
   ],
   "require": {
-    "unmit/laravel-business-objects": "v0.1.13"
+    "unmit/ldk": "dev"
   },
   "require-dev": {
     "phpunit/phpunit": "^7.5",
@@ -27,7 +27,7 @@
   "autoload": {
     "psr-4": {
       "Unmit\\BusinessObjects\\Finance\\": "src/",
-      "Unmit\\BusinessObjects\\": "vendor/unmit/laravel-business-objects/src/"
+      "Unmit\\ldk\\": "vendor/unmit/ldk/src/"
     }
   },
   "autoload-dev": {
@@ -45,7 +45,7 @@
     "laravel": {
       "dont-discover": [],
       "providers": [
-        "Unmit\\BusinessObjects\\BusinessObjectsServiceProvider"
+        "Unmit\\ldk\\LdkServiceProvider"
       ]
     }
   }

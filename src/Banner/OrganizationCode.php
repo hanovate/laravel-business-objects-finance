@@ -3,8 +3,8 @@
 namespace Unmit\BusinessObjects\Finance\Banner;
 
 use Illuminate\Support\Collection;
-use Unmit\BusinessObjects\AbstractBusinessObject;
-use Unmit\BusinessObjects\BusinessObjectItem;
+use Unmit\ldk\BusinessObjects\AbstractBusinessObject;
+use Unmit\ldk\BusinessObjects\BusinessObjectItem;
 /**
  * Class: OrganizationCode
  *
