@@ -1,5 +1,5 @@
 <?php
-namespace Unmit\ldk\BusinessObjects\Finance;
+namespace Unmit\BusinessObjects\Finance;
 
 use Illuminate\Support\ServiceProvider;
 use Unmit\ldk\BusinessObjects\BusinessObjectsServiceProvider;
