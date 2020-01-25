@@ -34,7 +34,7 @@ class ActivityRequest extends Request
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTV_TITLE'
             ],
         ];
-        $this->pushElements($items,null,$elems,false);
+        $this->pushElements($items,$elems);
 
         $this->setFields($items);
     }
