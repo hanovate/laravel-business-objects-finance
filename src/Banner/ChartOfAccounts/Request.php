@@ -24,21 +24,26 @@ class Request extends AbstractBusinessObject
     {
         $items = new Collection();
 
-        // id (Unique Identifier)
-        $id = new BusinessObjectItem('id','Id','FZBCOAM_SEQUENCE_NUM');
-        $items->push($id);
+        $elems = [
+            [
+                BusinessObjectItem::BUSINESS_NAME => 'id',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_SEQUENCE_NUM'
+            ],[
+                BusinessObjectItem::NAME => 'netid',
+                BusinessObjectItem::BUSINESS_NAME => 'Initiator Netid',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_INITIATORID'
+            ],[
+                BusinessObjectItem::NAME => 'business_reason',
+                BusinessObjectItem::BUSINESS_NAME => 'Business Reason',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_REQUEST_COMMENTS'
+            ],[
+                BusinessObjectItem::NAME => 'submission_date',
+                BusinessObjectItem::BUSINESS_NAME => 'Submission Date',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_SUBMISSION_DATE'
+            ],
+        ];
 
-        // Initiator Id - netid
-        $initiatorId = new BusinessObjectItem('netid','Initiator Netid','FZBCOAM_INITIATORID');
-        $items->push($initiatorId);
-
-        // Business Reason
-        $businessReason = new BusinessObjectItem('business_reason', 'Business Reason', 'FZBCOAM_REQUEST_COMMENTS');
-        $items->push($businessReason);
-
-        // Submission Date
-        $submissionDate = new BusinessObjectItem('submission_date', 'Submission Date', 'FZBCOAM_SUBMISSION_DATE');
-        $items->push($submissionDate);
+        $this->pushElements($items,null,$elems,false);
 
         $this->setFields($items);
     }

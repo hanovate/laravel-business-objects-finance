@@ -23,14 +23,18 @@ class ActivityRequest extends Request
         parent::__construct();
 
         $items = $this->getFields();
-
-        // Organization Code
-        $organizationCode = new BusinessObjectItem('organization_code','Organization Code', 'FZBCOAM_ACTV_ORGN');
-        $items->push($organizationCode);
-
-        // Title
-        $title = new BusinessObjectItem('title', 'Title', 'FZBCOAM_ACTV_TITLE');
-        $items->push($title);
+        $elems = [
+            [
+                BusinessObjectItem::NAME => 'organization_code',
+                BusinessObjectItem::BUSINESS_NAME => 'Organization Code',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTV_ORGN'
+            ],[
+                BusinessObjectItem::NAME => 'title',
+                BusinessObjectItem::BUSINESS_NAME => 'Title',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTV_TITLE'
+            ],
+        ];
+        $this->pushElements($items,null,$elems,false);
 
         $this->setFields($items);
     }
