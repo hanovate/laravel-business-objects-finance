@@ -40,6 +40,18 @@ class Request extends AbstractBusinessObject
                 BusinessObjectItem::NAME => 'submission_date',
                 BusinessObjectItem::BUSINESS_NAME => 'Submission Date',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_SUBMISSION_DATE'
+            ],[
+                BusinessObjectItem::NAME => 'activity_date',
+                BusinessObjectItem::BUSINESS_NAME => 'Activity Date',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTIVITY_DATE'
+            ],[
+                BusinessObjectItem::NAME => 'status_comments',
+                BusinessObjectItem::BUSINESS_NAME => 'Approval Status Comments',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_STATUS_COMMENTS'
+            ],[
+                BusinessObjectItem::NAME => 'processor_id',
+                BusinessObjectItem::BUSINESS_NAME => 'Approver Netid',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_PROCESSORID'
             ],
         ];
 
