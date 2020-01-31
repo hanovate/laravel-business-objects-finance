@@ -33,7 +33,7 @@ class OrganizationCode extends AbstractBusinessObject
             ]
         ];
 
-        $this->pushElements($items,'ftvorgn',$elems);
+        $this->pushElements($items,$elems,'ftvorgn');
 
         $this->setFields($items);
     }
