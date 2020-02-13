@@ -1,10 +1,10 @@
 <?php
 
-namespace Unmit\BusinessObjects\Finance\Tests;
+namespace Unmit\BusinessObjects\Business\Finance\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Unmit\BusinessObjects\BusinessObjectsServiceProvider;
-use Unmit\BusinessObjects\Finance\BusinessObjectsFinanceServiceProvider;
+use Unmit\BusinessObjects\Business\Finance\BusinessObjectsFinanceServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {

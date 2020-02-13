@@ -1,6 +1,6 @@
 <?php
 
-namespace Unmit\BusinessObjects\Finance\ChartOfAccounts;
+namespace Unmit\BusinessObjects\Business\Finance\ChartOfAccounts;
 
 use Unmit\ldk\BusinessObjectsbstractBusinessObject;
 use Unmit\ldk\BusinessObjects\BusinessObjectItem;

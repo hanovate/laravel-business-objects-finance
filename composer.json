@@ -26,13 +26,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Unmit\\BusinessObjects\\Finance\\": "src/",
+      "Unmit\\BusinessObjects\\Business\\Finance\\": "src/",
       "Unmit\\ldk\\": "vendor/unmit/ldk/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Unmit\\BusinessObjects\\Finance\\Tests\\": "tests/"
+      "Unmit\\BusinessObjects\\Business\\Finance\\Tests\\": "tests/"
     }
   },
   "authors": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Unmit\BusinessObjects\Finance\ChartOfAccounts;
+namespace Unmit\BusinessObjects\Business\Finance\ChartOfAccounts;
 
 use Illuminate\Support\Collection;
 use Unmit\ldk\BusinessObjects\AbstractBusinessObject;

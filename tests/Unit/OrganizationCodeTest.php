@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Unmit\BusinessObjects\Finance\Tests\Unit;
+namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
-use Unmit\BusinessObjects\Finance\Tests\TestCase;
+use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
 use Unmit\BusinessObjects\BusinessObjectInterface;
 use Unmit\BusinessObjects\BusinessObjectItem;
-use Unmit\BusinessObjects\Finance\Banner\OrganizationCode;
+use Unmit\BusinessObjects\Business\Finance\Banner\OrganizationCode;
 
 
 final class OrganizationCodeTest extends TestCase

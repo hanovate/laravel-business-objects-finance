@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Unmit\BusinessObjects\Finance\Tests\Unit;
+namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
-use Unmit\BusinessObjects\Finance\Tests\TestCase;
+use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
 use Unmit\BusinessObjects\BusinessObjectInterface;
-use Unmit\BusinessObjects\Finance\Banner\ChartOfAccounts\Request;
+use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\Request;
 
 
 final class RequestTest extends TestCase
