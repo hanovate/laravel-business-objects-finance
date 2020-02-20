@@ -24,22 +24,24 @@ class FundRequest extends Request
         parent::__construct();
 
         $items = $this->getFields();
-
-        //Predecessor V_PRED IN VARCHAR2
-        $predecessor = new BusinessObjectItem('predecessor', 'Predecessor', 'V_PRED');
-        $items->push($predecessor);
-
-        // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $type = new BusinessObjectItem('type', 'Fund Type', 'V_TYPE');
-        $items->push($type);
-
-        //  Financial manager V_FINMAN IN VARCHAR2 populated for Index based on Fund
-        $financialManager = new BusinessObjectItem('financialManager', 'Financial Manager', 'V_FINMAN');
-        $items->push($financialManager);
-
-        //  Is data entry V_IS_DATAENTRY IN VARCHAR2 populated for Account, Fund, & Program
-        $isDataEntry = new BusinessObjectItem('isDataEntry', 'Is Data Entry', 'V_DATAENTRY');
-        $items->push($isDataEntry);
+        $elems = [
+            [
+                BusinessObjectItem::NAME => 'title',
+                BusinessObjectItem::BUSINESS_NAME => 'Title',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_TITLE'
+            ],
+            [
+                BusinessObjectItem::NAME => 'predecessor',
+                BusinessObjectItem::BUSINESS_NAME => 'Predecessor',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_PRED'
+            ],
+            [
+                BusinessObjectItem::NAME => 'isDataEntry',
+                BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_DATAENTRY'
+            ],
+        ];
+        $this->pushElements($items,$elems);
 
         $this->setFields($items);
     }
