@@ -16,7 +16,7 @@ class FundRequest extends Request
 {
     public $predecessor;
     public $type;
-    public $financialManager;
+    public $title;
     public $isDataEntry;
 
     public function __construct()
@@ -34,6 +34,11 @@ class FundRequest extends Request
                 BusinessObjectItem::NAME => 'predecessor',
                 BusinessObjectItem::BUSINESS_NAME => 'Predecessor',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_PRED'
+            ],
+            [
+                BusinessObjectItem::NAME => 'type',
+                BusinessObjectItem::BUSINESS_NAME => 'Fund Type',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_TYPE'
             ],
             [
                 BusinessObjectItem::NAME => 'isDataEntry',
