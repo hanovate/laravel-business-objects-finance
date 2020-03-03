@@ -2,8 +2,8 @@
 
 namespace Unmit\BusinessObjects\Business\Finance\ChartOfAccounts;
 
-use Unmit\ldk\BusinessObjectsbstractBusinessObject;
-use Unmit\BusinessObjects\BusinessObjectItem;
+use Unmit\ldk\BusinessObjects\AbstractBusinessObject;
+use Unmit\ldk\BusinessObjects\BusinessObjectItem;
 /**
  * Class: Request
  *
