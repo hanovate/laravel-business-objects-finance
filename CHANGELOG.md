@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2019-3-4 - RVE
+### Changed 
+- namespacing for ldk
+
 ## [0.1.2] - 2019-10-29 - RVE
 ### Changed 
 - removed title from request and moved to relative type
