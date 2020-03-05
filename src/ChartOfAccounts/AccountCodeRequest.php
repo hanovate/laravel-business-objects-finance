@@ -15,7 +15,9 @@ use Unmit\ldk\BusinessObjects\BusinessObjectItem;
 class AccountCodeRequest extends Request
 {
     public $predecessor;
+    public $account;
     public $type;
+    public $normalBalance;
     public $isDataEntry;
 
     public function __construct()
@@ -29,12 +31,16 @@ class AccountCodeRequest extends Request
         $items->push($predecessor);
 
         // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $type = new BusinessObjectItem('account', 'Account', 'FZBCOAM_ACCT');
-        $items->push($type);
+        $account = new BusinessObjectItem('account', 'Account', 'FZBCOAM_ACCT');
+        $items->push($account);
 
         // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
         $type = new BusinessObjectItem('type', 'Type', 'FZBCOAM_ACCT_TYPE');
         $items->push($type);
+
+        // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
+        $normalBalance = new BusinessObjectItem('normalBalance', 'Normal Balance', '');
+        $items->push($normalBalance);
 
         //  Is data entry V_IS_DATAENTRY IN VARCHAR2 populated for Account, Fund, & Program
         $isDataEntry = new BusinessObjectItem('isDataEntry', 'Is Data Entry', 'FZBCOAM_ACCT_DATAENTRY');
