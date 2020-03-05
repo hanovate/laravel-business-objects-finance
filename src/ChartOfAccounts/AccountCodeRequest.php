@@ -39,11 +39,11 @@ class AccountCodeRequest extends Request
         $items->push($type);
 
         // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $normalBalance = new BusinessObjectItem('normalBalance', 'Normal Balance', '');
+        $normalBalance = new BusinessObjectItem('normal_balance', 'Normal Balance', '');
         $items->push($normalBalance);
 
         //  Is data entry V_IS_DATAENTRY IN VARCHAR2 populated for Account, Fund, & Program
-        $isDataEntry = new BusinessObjectItem('isDataEntry', 'Is Data Entry', 'FZBCOAM_ACCT_DATAENTRY');
+        $isDataEntry = new BusinessObjectItem('is_data_entry', 'Is Data Entry', 'FZBCOAM_ACCT_DATAENTRY');
         $items->push($isDataEntry);
 
         $this->setFields($items);

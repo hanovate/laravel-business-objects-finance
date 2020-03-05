@@ -41,7 +41,7 @@ class FundRequest extends Request
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_TYPE'
             ],
             [
-                BusinessObjectItem::NAME => 'isDataEntry',
+                BusinessObjectItem::NAME => 'is_data_entry',
                 BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_DATAENTRY'
             ],
