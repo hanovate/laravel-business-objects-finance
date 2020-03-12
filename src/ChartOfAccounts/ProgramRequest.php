@@ -42,12 +42,7 @@ class ProgramRequest extends Request
                 BusinessObjectItem::NAME => 'endowment_type',
                 BusinessObjectItem::BUSINESS_NAME => 'Endowment Type',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_PROG_ENDOWSPEND'
-            ],
-            [
-                BusinessObjectItem::NAME => 'is_data_entry',
-                BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_DATAENTRY'
-            ],
+            ]
         ];
         $this->pushElements($items,$elems);
         $this->setFields($items);

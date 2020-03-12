@@ -39,12 +39,7 @@ class FundRequest extends Request
                 BusinessObjectItem::NAME => 'type',
                 BusinessObjectItem::BUSINESS_NAME => 'Fund Type',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_TYPE'
-            ],
-            [
-                BusinessObjectItem::NAME => 'is_data_entry',
-                BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_DATAENTRY'
-            ],
+            ]
         ];
         $this->pushElements($items,$elems);
 
