@@ -22,15 +22,34 @@ class ProgramRequest extends Request
         parent::__construct();
 
         $items = $this->getFields();
-
-        //Predecessor V_PRED IN VARCHAR2
-        $predecessor = new BusinessObjectItem('predecessor', 'Predecessor', 'V_PRED');
-        $items->push($predecessor);
-
-        //  Is data entry V_IS_DATAENTRY IN VARCHAR2 populated for Account, Fund, & Program
-        $isDataEntry = new BusinessObjectItem('isDataEntry', 'Is Data Entry', 'V_DATAENTRY');
-        $items->push($isDataEntry);
-
+        $elems = [
+            [
+                BusinessObjectItem::NAME => 'title',
+                BusinessObjectItem::BUSINESS_NAME => 'Title',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_TITLE'
+            ],
+            [
+                BusinessObjectItem::NAME => 'predecessor',
+                BusinessObjectItem::BUSINESS_NAME => 'Predecessor',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_PRED'
+            ],
+            [
+                BusinessObjectItem::NAME => 'endowment_fund',
+                BusinessObjectItem::BUSINESS_NAME => 'Endowment Fund',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_PROG_ENDOWFUND'
+            ],
+            [
+                BusinessObjectItem::NAME => 'endowment_type',
+                BusinessObjectItem::BUSINESS_NAME => 'Endowment Type',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_PROG_ENDOWSPEND'
+            ],
+            [
+                BusinessObjectItem::NAME => 'is_data_entry',
+                BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_FUND_DATAENTRY'
+            ],
+        ];
+        $this->pushElements($items,$elems);
         $this->setFields($items);
     }
 
