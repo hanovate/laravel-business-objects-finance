@@ -4,9 +4,9 @@
 namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
 use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
-use Unmit\BusinessObjects\BusinessObjectInterface;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\Request;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\IndexRequest;
+use Unmit\ldk\BusinessObjects\BusinessObjectInterface;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\Request;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\IndexRequest;
 
 final class IndexRequestTest extends TestCase
 {
@@ -18,14 +18,36 @@ final class IndexRequestTest extends TestCase
     public function testColumnsAreAccurateTest()
     {
         $request = new IndexRequest();
-        $columnList = ['V_REQUEST_ID','V_INIT_ID','V_TITLE','V_REC_COMM','V_FUND','V_ACTV','V_PROG','V_FINMAN','V_ORGN'];
+        $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_INITIATORID'
+            ,'FZBCOAM_PROCESSORID'
+            ,'FZBCOAM_REQUEST_COMMENTS'
+            ,'FZBCOAM_SEQUENCE_NUM'
+            ,'FZBCOAM_STATUS_COMMENTS'
+            ,'FZBCOAM_SUBMISSION_DATE'
+            ,'V_ACTV'
+            ,'V_FINMAN'
+            ,'V_FUND'
+            ,'V_ORGN'
+            ,'V_PROG'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
     public function testBusinessNamesAreAccurateTest()
     {
         $request = new IndexRequest();
-        $businessNameList = ['Id','Initiator Netid', 'Title','Business Reason','Program','Fund', 'Activity','Financial Manager','Organization Code'];
+        $businessNameList = ['Activity'
+            ,'Activity Date'
+            ,'Approval Status Comments'
+            ,'Approver Netid'
+            ,'Business Reason'
+            ,'Financial Manager'
+            ,'Fund'
+            ,'Initiator Netid'
+            ,'Organization Code'
+            ,'Program'
+            ,'Submission Date'
+            ,'id'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()

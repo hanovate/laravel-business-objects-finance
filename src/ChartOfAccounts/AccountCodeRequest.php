@@ -14,39 +14,36 @@ use Unmit\ldk\BusinessObjects\BusinessObjectItem;
  */
 class AccountCodeRequest extends Request
 {
-    public $predecessor;
-    public $account;
-    public $type;
-    public $normalBalance;
-    public $isDataEntry;
-
     public function __construct()
     {
         parent::__construct();
 
         $items = $this->getFields();
+        $elems = [
+            [
+                BusinessObjectItem::NAME => 'predecessor',
+                BusinessObjectItem::BUSINESS_NAME => 'Predecessor',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_PRED'
+            ],[
+                BusinessObjectItem::NAME => 'account',
+                BusinessObjectItem::BUSINESS_NAME => 'Account',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT'
+            ],[
+                BusinessObjectItem::NAME => 'type',
+                BusinessObjectItem::BUSINESS_NAME => 'Type',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_TYPE'
+            ],[
+                BusinessObjectItem::NAME => 'normal_balance',
+                BusinessObjectItem::BUSINESS_NAME => 'Normal Balance',
+                BusinessObjectItem::COLUMN_NAME => 'normal_balance'
+            ],[
+                BusinessObjectItem::NAME => 'is_data_entry',
+                BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_DATAENTRY'
+            ]
+        ];
 
-        //Predecessor V_PRED IN VARCHAR2
-        $predecessor = new BusinessObjectItem('predecessor', 'Predecessor', 'FZBCOAM_ACCT_PRED');
-        $items->push($predecessor);
-
-        // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $account = new BusinessObjectItem('account', 'Account', 'FZBCOAM_ACCT');
-        $items->push($account);
-
-        // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $type = new BusinessObjectItem('type', 'Type', 'FZBCOAM_ACCT_TYPE');
-        $items->push($type);
-
-        // Fund Type V_FND_TYPE IN VARCHAR2 populated with Fund
-        $normalBalance = new BusinessObjectItem('normal_balance', 'Normal Balance', '');
-        $items->push($normalBalance);
-
-        //  Is data entry V_IS_DATAENTRY IN VARCHAR2 populated for Account, Fund, & Program
-        $isDataEntry = new BusinessObjectItem('is_data_entry', 'Is Data Entry', 'FZBCOAM_ACCT_DATAENTRY');
-        $items->push($isDataEntry);
-
+        $this->pushElements($items,$elems);
         $this->setFields($items);
     }
-
 }

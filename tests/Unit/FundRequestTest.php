@@ -3,35 +3,60 @@
 
 namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
+use Unmit\BusinessObjects\Business\Finance\Banner\Fund;
 use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
-use Unmit\BusinessObjects\BusinessObjectInterface;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\Request;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\FundRequest;
+use Unmit\ldk\BusinessObjects\BusinessObjectInterface;
 
 
 final class FundRequestTest extends TestCase
 {
     public function testIsInterface()
     {
-        $request = new FundRequest();
-        $this->assertInstanceOf(BusinessObjectInterface::class, $request);
+        $fund = new Fund();
+        $this->assertInstanceOf(BusinessObjectInterface::class, $fund);
     }
-    public function testColumnsAreAccurateTest()
+    public function testColumnsAreAccurate()
     {
-        $request = new FundRequest();
-        $columnList = ['V_REQUEST_ID','V_INIT_ID','V_TITLE','V_REC_COMM','V_PRED','V_TYPE', 'V_FINMAN','V_DATAENTRY'];
-        $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
+        $fund = new Fund();
+        $columnList = ['ftvfund_fund_code','ftvfund_title'];
+        $this->assertEqualsCanonicalizing($columnList,$fund->getColumnNames());
+    }
+    public function testBusinessNamesAreAccurate()
+    {
+        $fund = new Fund();
+        $businessNameList = ['code','title'];
+        $this->assertEqualsCanonicalizing($businessNameList,$fund->getBusinessNames());
+    }
+    public function testJsonIsAccurate()
+    {
+        $fund = new Fund();
+        $json = '{"0":{"business-name":"code","column-name":"ftvfund_fund_code","name":"id"},"1":{"business-name":"title","column-name":"ftvfund_title","name":"title"}}';
+        $this->assertJsonStringEqualsJsonString($json,$fund->toJson());
+    }
+    public function testArrayIsAccurate()
+    {
+        $fund = new Fund();
+        $array = [
+            [
+                "business-name" => "code",
+                "column-name" => "ftvfund_fund_code",
+                "name" => "id"
+            ],
+            [
+                "business-name" => "title",
+                "column-name" => "ftvfund_title",
+                "name" => "title"
+            ]
+        ];
+        $this->assertEqualsCanonicalizing($array,$fund->toArray());
+    }
 
-    }
-    public function testBusinessNamesAreAccurateTest()
+    public function testGetNames()
     {
-        $request = new FundRequest();
-        $businessNameList = ['Id','Initiator Netid', 'Title','Business Reason','Predecessor', 'Fund Type', 'Financial Manager', 'Is Data Entry'];
-        $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
-    }
-    public function testIsInherited()
-    {
-        $request = new FundRequest();
-        $this->assertInstanceOf(Request::class, $request);
+        $fund = new Fund();
+        $item = $fund->getByColumnName('ftvfund_title');
+        $this->assertEquals('title', $item->getBusinessName());
+        $item = $fund->getByBusinessName('title');
+        $this->assertEquals('ftvfund_title', $item->getColumnName());
     }
 }

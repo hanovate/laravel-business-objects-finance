@@ -4,7 +4,7 @@
 namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
 use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
-use Unmit\BusinessObjects\BusinessObjectInterface;
+use Unmit\ldk\BusinessObjects\BusinessObjectInterface;
 use Unmit\BusinessObjects\BusinessObjectItem;
 use Unmit\BusinessObjects\Business\Finance\Banner\OrganizationCode;
 
@@ -34,7 +34,7 @@ final class OrganizationCodeTest extends TestCase
         $json = '{"0":{
                         "business-name":"code",
                         "column-name":"ftvorgn_orgn_code",
-                        "name":"code"},
+                        "name":"id"},
                 "1":{
                         "business-name":"title",
                         "column-name":"ftvorgn_title",
@@ -47,7 +47,7 @@ final class OrganizationCodeTest extends TestCase
         $array = [
                     ["business-name" => "code",
                     "column-name" => "ftvorgn_orgn_code",
-                    "name" => "code"],
+                    "name" => "id"],
                     [
                     "business-name" => "title",
                     "column-name" => "ftvorgn_title",
@@ -60,7 +60,6 @@ final class OrganizationCodeTest extends TestCase
     {
         $organizationCode = new OrganizationCode();
         $item = $organizationCode->getByColumnName('ftvorgn_title');
-        $this->assertInstanceOf(BusinessObjectItem::class, $item);
         $this->assertEquals('title', $item->getBusinessName());
         $item = $organizationCode->getByBusinessName('title');
         $this->assertEquals('ftvorgn_title', $item->getColumnName());
