@@ -4,9 +4,9 @@
 namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
 use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
-use Unmit\BusinessObjects\BusinessObjectInterface;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\Request;
-use Unmit\BusinessObjects\Business\Finance\Banner\ChartOfAccounts\ProgramRequest;
+use Unmit\ldk\BusinessObjects\BusinessObjectInterface;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\Request;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\ProgramRequest;
 
 final class ProgramRequestTest extends TestCase
 {
@@ -18,14 +18,34 @@ final class ProgramRequestTest extends TestCase
     public function testColumnsAreAccurateTest()
     {
         $request = new ProgramRequest();
-        $columnList = ['V_REQUEST_ID','V_INIT_ID','V_TITLE','V_REC_COMM','V_PRED','V_DATAENTRY'];
+        $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_FUND_PRED'
+            ,'FZBCOAM_FUND_TITLE'
+            ,'FZBCOAM_INITIATORID'
+            ,'FZBCOAM_PROCESSORID'
+            ,'FZBCOAM_PROG_ENDOWFUND'
+            ,'FZBCOAM_PROG_ENDOWSPEND'
+            ,'FZBCOAM_REQUEST_COMMENTS'
+            ,'FZBCOAM_SEQUENCE_NUM'
+            ,'FZBCOAM_STATUS_COMMENTS'
+            ,'FZBCOAM_SUBMISSION_DATE'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
     public function testBusinessNamesAreAccurateTest()
     {
         $request = new ProgramRequest();
-        $businessNameList = ['Id','Initiator Netid', 'Title','Business Reason','Predecessor','Is Data Entry'];
+        $businessNameList = ['Activity Date'
+            ,'Approval Status Comments'
+            ,'Approver Netid'
+            ,'Business Reason'
+            ,'Endowment Fund'
+            ,'Endowment Type'
+            ,'Initiator Netid'
+            ,'Predecessor'
+            ,'Submission Date'
+            ,'Title'
+            ,'id'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()
