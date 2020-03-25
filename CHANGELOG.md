@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2020-03-25 - RVE
+### Added 
+- Banner Fund
+### Fixed 
+- Unit Tests
+
 ## [0.1.3] - 2019-3-4 - RVE
 ### Changed 
 - namespacing for ldk
