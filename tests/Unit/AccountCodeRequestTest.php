@@ -28,8 +28,7 @@ final class AccountCodeRequestTest extends TestCase
             ,'FZBCOAM_REQUEST_COMMENTS'
             ,'FZBCOAM_SEQUENCE_NUM'
             ,'FZBCOAM_STATUS_COMMENTS'
-            ,'FZBCOAM_SUBMISSION_DATE'
-            ,'normal_balance'];
+            ,'FZBCOAM_SUBMISSION_DATE'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -43,7 +42,6 @@ final class AccountCodeRequestTest extends TestCase
             ,'Business Reason'
             ,'Initiator Netid'
             ,'Is Data Entry'
-            ,'Normal Balance'
             ,'Predecessor'
             ,'Submission Date'
             ,'Type'

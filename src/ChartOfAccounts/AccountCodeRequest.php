@@ -33,10 +33,6 @@ class AccountCodeRequest extends Request
                 BusinessObjectItem::BUSINESS_NAME => 'Type',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_TYPE'
             ],[
-                BusinessObjectItem::NAME => 'normal_balance',
-                BusinessObjectItem::BUSINESS_NAME => 'Normal Balance',
-                BusinessObjectItem::COLUMN_NAME => 'normal_balance'
-            ],[
                 BusinessObjectItem::NAME => 'is_data_entry',
                 BusinessObjectItem::BUSINESS_NAME => 'Is Data Entry',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_DATAENTRY'
