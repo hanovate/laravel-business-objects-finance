@@ -24,6 +24,11 @@ class AccountCodeRequest extends Request
                 BusinessObjectItem::NAME => 'predecessor',
                 BusinessObjectItem::BUSINESS_NAME => 'Predecessor',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_PRED'
+            ],
+            [
+                BusinessObjectItem::NAME => 'title',
+                BusinessObjectItem::BUSINESS_NAME => 'Title',
+                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACCT_TITLE'
             ],[
                 BusinessObjectItem::NAME => 'account',
                 BusinessObjectItem::BUSINESS_NAME => 'Account',
