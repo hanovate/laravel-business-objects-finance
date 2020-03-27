@@ -20,6 +20,7 @@ final class AccountCodeRequestTest extends TestCase
         $request = new AccountCodeRequest();
         $columnList = ['FZBCOAM_ACCT'
             ,'FZBCOAM_ACCT_DATAENTRY'
+            ,'FZBCOAM_ACCT_TITLE'
             ,'FZBCOAM_ACCT_PRED'
             ,'FZBCOAM_ACCT_TYPE'
             ,'FZBCOAM_ACTIVITY_DATE'
@@ -42,6 +43,7 @@ final class AccountCodeRequestTest extends TestCase
             ,'Business Reason'
             ,'Initiator Netid'
             ,'Is Data Entry'
+            ,'Title'
             ,'Predecessor'
             ,'Submission Date'
             ,'Type'
