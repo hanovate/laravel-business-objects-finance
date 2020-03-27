@@ -21,33 +21,33 @@ final class IndexRequestTest extends TestCase
         $columnList = ['FZBCOAM_ACTIVITY_DATE'
             ,'FZBCOAM_INITIATORID'
             ,'FZBCOAM_PROCESSORID'
+            ,'FZBCOAM_INDEX_TITLE'
             ,'FZBCOAM_REQUEST_COMMENTS'
             ,'FZBCOAM_SEQUENCE_NUM'
             ,'FZBCOAM_STATUS_COMMENTS'
             ,'FZBCOAM_SUBMISSION_DATE'
-            ,'V_ACTV'
-            ,'V_FINMAN'
-            ,'V_FUND'
-            ,'V_ORGN'
-            ,'V_PROG'];
+            ,'FZBCOAM_ACTV'
+            ,'FZBCOAM_FUND'
+            ,'FZBCOAM_ORGN'
+            ,'FZBCOAM_PROG'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
     public function testBusinessNamesAreAccurateTest()
     {
         $request = new IndexRequest();
-        $businessNameList = ['Activity'
+        $businessNameList = ['id'
+            ,'Initiator Netid'
+            ,'Business Reason'
+            ,'Submission Date'
             ,'Activity Date'
             ,'Approval Status Comments'
             ,'Approver Netid'
-            ,'Business Reason'
-            ,'Financial Manager'
+            ,'Title'
+            ,'Organization'
             ,'Fund'
-            ,'Initiator Netid'
-            ,'Organization Code'
             ,'Program'
-            ,'Submission Date'
-            ,'id'];
+            , 'Activity'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()
