@@ -44,6 +44,11 @@ class IndexRequest extends Request
                 BusinessObjectItem::NAME => 'activity',
                 BusinessObjectItem::BUSINESS_NAME => 'Activity',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTV'
+            ],
+            [
+                BusinessObjectItem::NAME => 'designated_approver_id',
+                BusinessObjectItem::BUSINESS_NAME => 'Designated Approver',
+                BusinessObjectItem::COLUMN_NAME => ' '
             ]
         ];
         $this->pushElements($items,$elems);

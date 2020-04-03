@@ -26,7 +26,8 @@ final class ActivityRequestTest extends TestCase
             ,'FZBCOAM_REQUEST_COMMENTS'
             ,'FZBCOAM_SEQUENCE_NUM'
             ,'FZBCOAM_STATUS_COMMENTS'
-            ,'FZBCOAM_SUBMISSION_DATE'];
+            ,'FZBCOAM_SUBMISSION_DATE'
+            ,' '];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -41,7 +42,8 @@ final class ActivityRequestTest extends TestCase
             ,'Organization Code'
             ,'Submission Date'
             ,'Title'
-            ,'id'];
+            ,'id'
+            ,'Designated Approver'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()

@@ -29,7 +29,8 @@ final class IndexRequestTest extends TestCase
             ,'FZBCOAM_ACTV'
             ,'FZBCOAM_FUND'
             ,'FZBCOAM_ORGN'
-            ,'FZBCOAM_PROG'];
+            ,'FZBCOAM_PROG'
+            ,' '];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -47,7 +48,8 @@ final class IndexRequestTest extends TestCase
             ,'Organization'
             ,'Fund'
             ,'Program'
-            , 'Activity'];
+            , 'Activity'
+            , 'Designated Approver'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()
