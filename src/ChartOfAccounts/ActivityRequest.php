@@ -32,6 +32,11 @@ class ActivityRequest extends Request
                 BusinessObjectItem::BUSINESS_NAME => 'Title',
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTV_TITLE'
             ],
+            [
+                BusinessObjectItem::NAME => 'designated_approver_id',
+                BusinessObjectItem::BUSINESS_NAME => 'Designated Approver',
+                BusinessObjectItem::COLUMN_NAME => ' '
+            ]
         ];
         $this->pushElements($items,$elems);
 
