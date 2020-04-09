@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Unmit\ldk\BusinessObjects\AbstractBusinessObject;
 use Unmit\ldk\BusinessObjects\BusinessObjectItem;
 /**
- * Class: OrganizationCode
+ * Class: Organization
  *
  * @see AbstractBusinessObject
  *
