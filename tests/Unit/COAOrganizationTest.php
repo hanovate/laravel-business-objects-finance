@@ -18,21 +18,21 @@ final class COAOrganizationTest extends TestCase
     }
     public function testColumnsAreAccurate()
     {
-        $organization = new OrganizationCode();
-        $columnList = ['ftvorgn_orgn_code','ftvorgn_title'];
+        $organization = new Organization();
+        $columnList = ['organization_code','organization_desc','financial_manager_name','financial_manager_uid'];
         $this->assertEqualsCanonicalizing($columnList,$organization->getColumnNames());
     }
     public function testBusinessNamesAreAccurate()
     {
-        $organization = new OrganizationCode();
-        $businessNameList = ['code','title','financial_manager','financial_manager_pidm'];
+        $organization = new Organization();
+        $businessNameList = ['Id','Title','Financial Manager','Financial Manager Id'];
         $this->assertEqualsCanonicalizing($businessNameList,$organization->getBusinessNames());
     }
     public function testJsonIsAccurate()
     {
-        $organization = new OrganizationCode();
+        $organization = new Organization();
         $json = '{"0":{
-                        "business-name":"code",
+                        "business-name":"Id",
                         "column-name":"organization_code",
                         "name":"id"},
                 "1":{
@@ -51,7 +51,7 @@ final class COAOrganizationTest extends TestCase
     }
     public function testArrayIsAccurate()
     {
-        $organization = new OrganizationCode();
+        $organization = new Organization();
         $array = [
                     ["business-name" => "Id",
                     "column-name" => "organization_code",

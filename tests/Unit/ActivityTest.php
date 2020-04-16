@@ -9,16 +9,11 @@ use Unmit\BusinessObjects\Business\Finance\Banner\Activity;
 
 final class ActivityTest extends TestCase
 {
-    public function testIsInterface()
-    {
-        $request = new Activity();
-        $this->assertInstanceOf(BusinessObjectInterface::class, $request);
-    }
     public function testColumnsAreAccurateTest()
     {
         $request = new Activity();
-        $columnList = ['FTVACTV_ACTV_CODE'
-            ,'FTVACTV_ACTV_TITLE'];
+        $columnList = ['ftvactv_actv_code'
+            ,'ftvactv_title'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -29,9 +24,5 @@ final class ActivityTest extends TestCase
             ,'Title'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
-    public function testIsInherited()
-    {
-        $request = new Activity();
-        $this->assertInstanceOf(Request::class, $request);
-    }
+
 }
