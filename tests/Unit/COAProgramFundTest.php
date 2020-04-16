@@ -19,7 +19,7 @@ final class COAProgramFundTest extends TestCase
     public function testColumnsAreAccurate()
     {
         $programFund = new ProgramFund();
-        $columnList = ['fund_level_3'];
+        $columnList = ['fzvfndp_fund_level_3'];
         $this->assertEqualsCanonicalizing($columnList,$programFund->getColumnNames());
     }
     public function testBusinessNamesAreAccurate()
@@ -33,7 +33,7 @@ final class COAProgramFundTest extends TestCase
         $programFund = new ProgramFund();
         $json = '{"0":{
                          "business-name":"Title",
-                        "column-name":"fund_level_3",
+                        "column-name":"fzvfndp_fund_level_3",
                         "name":"id"}}';
         $this->assertJsonStringEqualsJsonString($json,$programFund->toJson());
     }
@@ -43,7 +43,7 @@ final class COAProgramFundTest extends TestCase
         $array = [
                     [
                     "business-name" => "Title",
-                    "column-name" => "fund_level_3",
+                    "column-name" => "fzvfndp_fund_level_3",
                     "name" => "id"]
                 ];
         $this->assertEqualsCanonicalizing($array,$programFund->toArray());
