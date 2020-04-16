@@ -25,10 +25,11 @@ class Activity extends AbstractBusinessObject
         $elems = [
             [
                 BusinessObjectItem::NAME => 'id',
-                BusinessObjectItem::BUSINESS_NAME => 'code',
+                BusinessObjectItem::BUSINESS_NAME => 'Code',
                 BusinessObjectItem::COLUMN_NAME => 'actv_code'
             ],[
                 BusinessObjectItem::BUSINESS_NAME => 'title',
+                BusinessObjectItem::BUSINESS_NAME => 'Title',
                 BusinessObjectItem::COLUMN_NAME => 'title'
             ]
         ];
