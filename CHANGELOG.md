@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.9] - 2020-04-16 - RVE
+### Added 
+- program fund and unit test (Task 1716)
+
+## [0.1.8] - 2020-04-09 - RVE
+### Added 
+- COA organization w finance manager
+- coa organization unit test
+### Fixed
+- Activity unit tests
+
 ## [0.1.7] - 2020-04-09 - RVE
 ### Added 
 - Activity to chart of accounts
