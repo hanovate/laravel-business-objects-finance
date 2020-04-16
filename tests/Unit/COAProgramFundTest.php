@@ -13,40 +13,40 @@ final class COAProgramFundTest extends TestCase
 {
     public function testIsInterface()
     {
-        $organization = new ProgramFund();
-        $this->assertInstanceOf(BusinessObjectInterface::class, $organization);
+        $programFund = new ProgramFund();
+        $this->assertInstanceOf(BusinessObjectInterface::class, $programFund);
     }
     public function testColumnsAreAccurate()
     {
-        $organization = new ProgramFund();
+        $programFund = new ProgramFund();
         $columnList = ['fund_level_3'];
-        $this->assertEqualsCanonicalizing($columnList,$organization->getColumnNames());
+        $this->assertEqualsCanonicalizing($columnList,$programFund->getColumnNames());
     }
     public function testBusinessNamesAreAccurate()
     {
-        $organization = new ProgramFund();
+        $programFund = new ProgramFund();
         $businessNameList = ['Title'];
-        $this->assertEqualsCanonicalizing($businessNameList,$organization->getBusinessNames());
+        $this->assertEqualsCanonicalizing($businessNameList,$programFund->getBusinessNames());
     }
     public function testJsonIsAccurate()
     {
-        $organization = new ProgramFund();
+        $programFund = new ProgramFund();
         $json = '{"0":{
                          "business-name":"Title",
                         "column-name":"fund_level_3",
                         "name":"id"}}';
-        $this->assertJsonStringEqualsJsonString($json,$organization->toJson());
+        $this->assertJsonStringEqualsJsonString($json,$programFund->toJson());
     }
     public function testArrayIsAccurate()
     {
-        $organization = new ProgramFund();
+        $programFund = new ProgramFund();
         $array = [
                     [
                     "business-name" => "Title",
                     "column-name" => "fund_level_3",
                     "name" => "id"]
                 ];
-        $this->assertEqualsCanonicalizing($array,$organization->toArray());
+        $this->assertEqualsCanonicalizing($array,$programFund->toArray());
     }
 
 }
