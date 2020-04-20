@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10] - 2020-04-20 - RVE
+### Added 
+- Organization request and unit test (Task 1757)
+
+
 ## [0.1.9] - 2020-04-16 - RVE
 ### Added 
 - program fund and unit test (Task 1716)
