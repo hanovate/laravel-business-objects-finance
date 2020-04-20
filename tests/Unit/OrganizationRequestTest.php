@@ -3,60 +3,52 @@
 
 namespace Unmit\BusinessObjects\Business\Finance\Tests\Unit;
 
-use Unmit\BusinessObjects\Business\Finance\Banner\Fund;
 use Unmit\BusinessObjects\Business\Finance\Tests\TestCase;
 use Unmit\ldk\BusinessObjects\BusinessObjectInterface;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\Request;
+use Unmit\BusinessObjects\Business\Finance\ChartOfAccounts\OrganizationRequest;
 
-
-final class FundRequestTest extends TestCase
+final class OrganizationRequestTest extends TestCase
 {
     public function testIsInterface()
     {
-        $fund = new Fund();
-        $this->assertInstanceOf(BusinessObjectInterface::class, $fund);
+        $request = new OrganizationRequest();
+        $this->assertInstanceOf(BusinessObjectInterface::class, $request);
     }
-    public function testColumnsAreAccurate()
+    public function testColumnsAreAccurateTest()
     {
-        $fund = new Fund();
-        $columnList = ['ftvfund_fund_code','ftvfund_title'];
-        $this->assertEqualsCanonicalizing($columnList,$fund->getColumnNames());
-    }
-    public function testBusinessNamesAreAccurate()
-    {
-        $fund = new Fund();
-        $businessNameList = ['code','title'];
-        $this->assertEqualsCanonicalizing($businessNameList,$fund->getBusinessNames());
-    }
-    public function testJsonIsAccurate()
-    {
-        $fund = new Fund();
-        $json = '{"0":{"business-name":"code","column-name":"ftvfund_fund_code","name":"id"},"1":{"business-name":"title","column-name":"ftvfund_title","name":"title"}}';
-        $this->assertJsonStringEqualsJsonString($json,$fund->toJson());
-    }
-    public function testArrayIsAccurate()
-    {
-        $fund = new Fund();
-        $array = [
-            [
-                "business-name" => "code",
-                "column-name" => "ftvfund_fund_code",
-                "name" => "id"
-            ],
-            [
-                "business-name" => "title",
-                "column-name" => "ftvfund_title",
-                "name" => "title"
-            ]
-        ];
-        $this->assertEqualsCanonicalizing($array,$fund->toArray());
-    }
+        $request = new OrganizationRequest();
+        $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_ORGN_PRED'
+            ,'FZBCOAM_ORGN_TITLE'
+            ,'FZBCOAM_INITIATORID'
+            ,'FZBCOAM_PROCESSORID'
+            ,'FZBCOAM_REQUEST_COMMENTS'
+            ,'FZBCOAM_SEQUENCE_NUM'
+            ,'FZBCOAM_STATUS_COMMENTS'
+            ,'FZBCOAM_SUBMISSION_DATE'
+            ,' '];
+        $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
-    public function testGetNames()
+    }
+    public function testBusinessNamesAreAccurateTest()
     {
-        $fund = new Fund();
-        $item = $fund->getByColumnName('ftvfund_title');
-        $this->assertEquals('title', $item->getBusinessName());
-        $item = $fund->getByBusinessName('title');
-        $this->assertEquals('ftvfund_title', $item->getColumnName());
+        $request = new OrganizationRequest();
+        $businessNameList = ['Activity Date'
+            ,'Approval Status Comments'
+            ,'Approver Netid'
+            ,'Business Reason'
+            ,'Initiator Netid'
+            ,'Predecessor'
+            ,'Submission Date'
+            ,'Title'
+            ,'id'
+            ,'Designated Approver'];
+        $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
+    }
+    public function testIsInherited()
+    {
+        $request = new OrganizationRequest();
+        $this->assertInstanceOf(Request::class, $request);
     }
 }

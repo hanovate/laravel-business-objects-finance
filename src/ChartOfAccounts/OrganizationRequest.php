@@ -20,7 +20,8 @@ class OrganizationRequest extends Request
 
     public function __construct()
     {
-        $items = new Collection();
+
+        parent::__construct();
 
         $items = $this->getFields();
         $elems = [
@@ -30,8 +31,8 @@ class OrganizationRequest extends Request
                 BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ORGN_TITLE'
             ],
             [
-                BusinessObjectItem::NAME => 'financial_manager_pidm',
-                BusinessObjectItem::BUSINESS_NAME => 'Financial Manager Id',
+                BusinessObjectItem::NAME => 'designated_approver_pidm',
+                BusinessObjectItem::BUSINESS_NAME => 'Designated Approver',
                 BusinessObjectItem::COLUMN_NAME => ' '
             ],
             [
