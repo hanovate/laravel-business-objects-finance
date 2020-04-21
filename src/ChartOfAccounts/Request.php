@@ -27,35 +27,39 @@ class Request extends AbstractBusinessObject
         $elems = [
             [
                 BusinessObjectItem::BUSINESS_NAME => 'id',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_SEQUENCE_NUM'
+                BusinessObjectItem::COLUMN_NAME => 'SEQUENCE_NUM'
             ],[
                 BusinessObjectItem::NAME => 'netid',
                 BusinessObjectItem::BUSINESS_NAME => 'Initiator Netid',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_INITIATORID'
+                BusinessObjectItem::COLUMN_NAME => 'INITIATORID'
             ],[
                 BusinessObjectItem::NAME => 'business_reason',
                 BusinessObjectItem::BUSINESS_NAME => 'Business Reason',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_REQUEST_COMMENTS'
+                BusinessObjectItem::COLUMN_NAME => 'REQUEST_COMMENTS'
             ],[
                 BusinessObjectItem::NAME => 'submission_date',
                 BusinessObjectItem::BUSINESS_NAME => 'Submission Date',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_SUBMISSION_DATE'
+                BusinessObjectItem::COLUMN_NAME => 'SUBMISSION_DATE'
             ],[
                 BusinessObjectItem::NAME => 'activity_date',
                 BusinessObjectItem::BUSINESS_NAME => 'Activity Date',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_ACTIVITY_DATE'
+                BusinessObjectItem::COLUMN_NAME => 'ACTIVITY_DATE'
             ],[
                 BusinessObjectItem::NAME => 'status_comments',
                 BusinessObjectItem::BUSINESS_NAME => 'Approval Status Comments',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_STATUS_COMMENTS'
+                BusinessObjectItem::COLUMN_NAME => 'STATUS_COMMENTS'
             ],[
                 BusinessObjectItem::NAME => 'processor_id',
                 BusinessObjectItem::BUSINESS_NAME => 'Approver Netid',
-                BusinessObjectItem::COLUMN_NAME => 'FZBCOAM_PROCESSORID'
-            ],
+                BusinessObjectItem::COLUMN_NAME => 'PROCESSORID'
+            ],[
+                BusinessObjectItem::NAME => 'approver_in_process',
+                BusinessObjectItem::BUSINESS_NAME => 'Approver In Process',
+                BusinessObjectItem::COLUMN_NAME => 'AIP'
+            ]
         ];
 
-        $this->pushElements($items,$elems);
+        $this->pushElements($items,$elems, 'FZBCOAM');
 
         $this->setFields($items);
     }

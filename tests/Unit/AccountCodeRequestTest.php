@@ -24,6 +24,7 @@ final class AccountCodeRequestTest extends TestCase
             ,'FZBCOAM_ACCT_PRED'
             ,'FZBCOAM_ACCT_TYPE'
             ,'FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_AIP'
             ,'FZBCOAM_INITIATORID'
             ,'FZBCOAM_PROCESSORID'
             ,'FZBCOAM_REQUEST_COMMENTS'
@@ -38,6 +39,7 @@ final class AccountCodeRequestTest extends TestCase
         $request = new AccountCodeRequest();
         $businessNameList = ['Account'
             ,'Activity Date'
+            ,'Approver In Process'
             ,'Approval Status Comments'
             ,'Approver Netid'
             ,'Business Reason'

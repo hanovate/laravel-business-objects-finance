@@ -19,6 +19,7 @@ final class ProgramRequestTest extends TestCase
     {
         $request = new ProgramRequest();
         $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_AIP'
             ,'FZBCOAM_FUND_PRED'
             ,'FZBCOAM_FUND_TITLE'
             ,'FZBCOAM_INITIATORID'
@@ -36,6 +37,7 @@ final class ProgramRequestTest extends TestCase
     {
         $request = new ProgramRequest();
         $businessNameList = ['Activity Date'
+            ,'Approver In Process'
             ,'Approval Status Comments'
             ,'Approver Netid'
             ,'Business Reason'

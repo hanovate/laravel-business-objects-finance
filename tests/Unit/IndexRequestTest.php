@@ -19,6 +19,7 @@ final class IndexRequestTest extends TestCase
     {
         $request = new IndexRequest();
         $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_AIP'
             ,'FZBCOAM_INITIATORID'
             ,'FZBCOAM_PROCESSORID'
             ,'FZBCOAM_INDEX_TITLE'
@@ -42,6 +43,7 @@ final class IndexRequestTest extends TestCase
             ,'Business Reason'
             ,'Submission Date'
             ,'Activity Date'
+            ,'Approver In Process'
             ,'Approval Status Comments'
             ,'Approver Netid'
             ,'Title'

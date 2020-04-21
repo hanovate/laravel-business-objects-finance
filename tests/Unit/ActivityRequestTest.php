@@ -19,6 +19,7 @@ final class ActivityRequestTest extends TestCase
     {
         $request = new ActivityRequest();
         $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_AIP'
             ,'FZBCOAM_ACTV_ORGN'
             ,'FZBCOAM_ACTV_TITLE'
             ,'FZBCOAM_INITIATORID'
@@ -43,7 +44,8 @@ final class ActivityRequestTest extends TestCase
             ,'Submission Date'
             ,'Title'
             ,'id'
-            ,'Designated Approver'];
+            ,'Designated Approver'
+            ,'Approver In Process'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()
