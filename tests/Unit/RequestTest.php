@@ -19,7 +19,7 @@ final class RequestTest extends TestCase
     {
         $request = new Request();
         $columnList = ['FZBCOAM_SEQUENCE_NUM','FZBCOAM_INITIATORID','FZBCOAM_REQUEST_COMMENTS','FZBCOAM_SUBMISSION_DATE',
-            'FZBCOAM_ACTIVITY_DATE','FZBCOAM_STATUS_COMMENTS','FZBCOAM_PROCESSORID'];
+            'FZBCOAM_ACTIVITY_DATE','FZBCOAM_STATUS_COMMENTS','FZBCOAM_PROCESSORID','FZBCOAM_AIP'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -27,7 +27,7 @@ final class RequestTest extends TestCase
     {
         $request = new Request();
         $businessNameList = ['id','Initiator Netid', 'Business Reason','Submission Date','Activity Date',
-            'Approval Status Comments','Approver Netid'];
+            'Approval Status Comments','Approver Netid','Approver In Process'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()

@@ -19,6 +19,7 @@ final class OrganizationRequestTest extends TestCase
     {
         $request = new OrganizationRequest();
         $columnList = ['FZBCOAM_ACTIVITY_DATE'
+            ,'FZBCOAM_AIP'
             ,'FZBCOAM_ORGN_PRED'
             ,'FZBCOAM_ORGN_TITLE'
             ,'FZBCOAM_INITIATORID'
@@ -35,6 +36,7 @@ final class OrganizationRequestTest extends TestCase
     {
         $request = new OrganizationRequest();
         $businessNameList = ['Activity Date'
+            ,'Approver In Process'
             ,'Approval Status Comments'
             ,'Approver Netid'
             ,'Business Reason'
