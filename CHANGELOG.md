@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.12] - 2020-04-20 - RVE
+### Added 
+- History object and unit tests (Task 1755)
+
+
 ## [0.1.11] - 2020-04-20 - RVE
 ### Added 
 - Approver in Process to request(Task 1755)
