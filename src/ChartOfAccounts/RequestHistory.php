@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Unmit\ldk\BusinessObjects\AbstractBusinessObject;
 use Unmit\ldk\BusinessObjects\BusinessObjectItem;
 /**
- * Class: Request
+ * Class: BaseRequest
  *
  * @see AbstractBusinessObject
  *
@@ -23,39 +23,39 @@ class RequestHistory extends AbstractBusinessObject
         $elems = [
             [
                 BusinessObjectItem::BUSINESS_NAME => 'id',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_SEQUENCE_NUM'
+                BusinessObjectItem::COLUMN_NAME => 'SEQUENCE_NUM'
             ],[
                 BusinessObjectItem::NAME => 'netid',
                 BusinessObjectItem::BUSINESS_NAME => 'Initiator Netid',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_INITIATORID'
+                BusinessObjectItem::COLUMN_NAME => 'INITIATORID'
             ],[
                 BusinessObjectItem::NAME => 'submission_date',
                 BusinessObjectItem::BUSINESS_NAME => 'Submission Date',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_SUBMISSION_DATE'
+                BusinessObjectItem::COLUMN_NAME => 'SUBMISSION_DATE'
             ],[
                 BusinessObjectItem::NAME => 'activity_date',
                 BusinessObjectItem::BUSINESS_NAME => 'Activity Date',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_ACTIVITY_DATE'
+                BusinessObjectItem::COLUMN_NAME => 'ACTIVITY_DATE'
             ],[
-                BusinessObjectItem::NAME => 'status',
-                BusinessObjectItem::BUSINESS_NAME => 'Approval Status',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_STATUS_DESCRIPTION'
+                BusinessObjectItem::NAME => 'status_code',
+                BusinessObjectItem::BUSINESS_NAME => 'Approval Code',
+                BusinessObjectItem::COLUMN_NAME => 'STATUS_CODE'
             ],[
                 BusinessObjectItem::NAME => 'processor_id',
                 BusinessObjectItem::BUSINESS_NAME => 'Approver Netid',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_PROCESSORID'
+                BusinessObjectItem::COLUMN_NAME => 'PROCESSORID'
             ],[
                 BusinessObjectItem::NAME => 'approver_in_process',
                 BusinessObjectItem::BUSINESS_NAME => 'Approver In Process',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_AIP'
+                BusinessObjectItem::COLUMN_NAME => 'AIP'
             ],[
-                BusinessObjectItem::NAME => 'request_type',
-                BusinessObjectItem::BUSINESS_NAME => 'Request Type',
-                BusinessObjectItem::COLUMN_NAME => 'LOG_ACTION_DESCRIPTION'
+                BusinessObjectItem::NAME => 'request_code',
+                BusinessObjectItem::BUSINESS_NAME => 'Request Code',
+                BusinessObjectItem::COLUMN_NAME => 'ACTION_CODE'
             ]
         ];
 
-        $this->pushElements($items,$elems );
+        $this->pushElements($items,$elems,'FZBCOAM_LOG' );
 
         $this->setFields($items);
     }

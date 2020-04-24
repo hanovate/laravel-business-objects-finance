@@ -18,8 +18,9 @@ final class RequestHistoryTest extends TestCase
     public function testColumnsAreAccurateTest()
     {
         $request = new RequestHistory();
-        $columnList = ['LOG_SEQUENCE_NUM','LOG_INITIATORID','LOG_SUBMISSION_DATE',
-            'LOG_ACTIVITY_DATE','LOG_STATUS_DESCRIPTION','LOG_PROCESSORID','LOG_AIP','LOG_ACTION_DESCRIPTION'];
+        $columnList = ['FZBCOAM_LOG_SEQUENCE_NUM','FZBCOAM_LOG_INITIATORID','FZBCOAM_LOG_SUBMISSION_DATE',
+            'FZBCOAM_LOG_ACTIVITY_DATE','FZBCOAM_LOG_STATUS_CODE','FZBCOAM_LOG_PROCESSORID',
+            'FZBCOAM_LOG_AIP','FZBCOAM_LOG_ACTION_CODE'];
         $this->assertEqualsCanonicalizing($columnList,$request->getColumnNames());
 
     }
@@ -27,7 +28,7 @@ final class RequestHistoryTest extends TestCase
     {
         $request = new RequestHistory();
         $businessNameList = ['id','Initiator Netid', 'Submission Date','Activity Date',
-            'Approval Status','Approver Netid','Approver In Process','Request Type'];
+            'Approval Code','Approver Netid','Approver In Process','Request Code'];
         $this->assertEqualsCanonicalizing($businessNameList,$request->getBusinessNames());
     }
     public function testIsInherited()
