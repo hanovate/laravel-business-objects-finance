@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.13] - 2020-04-20 - RVE
+### Added 
+- Account and Program for Index lookup (Task 1831)
+
 ## [0.1.12] - 2020-04-20 - RVE
 ### Added 
 - History object and unit tests (Task 1813)
